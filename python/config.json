@@ -1,0 +1,23 @@
+{
+    "sources": [
+        "https://github.com/clearskies-py/clearskies.git"
+    ],
+    "tree": [
+        {
+            "title": "Endpoints",
+            "source": "clearskies.Endpoint",
+            "classes": [
+                "clearskies.endpoints.Callable",
+                "clearskies.endpoints.Create",
+                "clearskies.endpoints.Get",
+                "clearskies.endpoints.Update",
+                "clearskies.endpoints.Delete",
+                "clearskies.endpoints.List",
+                "clearskies.endpoints.SimpleSearch",
+                "clearskies.endpoints.AdvancedSearch",
+                "clearskies.endpoints.RestfulApi",
+                "clearskies.endpoints.HealthCheck"
+            ]
+        }
+    ]
+}
