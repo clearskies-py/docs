@@ -1,11 +1,9 @@
 {
-    "sources": [
-        "https://github.com/clearskies-py/clearskies.git"
-    ],
     "tree": [
         {
             "title": "Endpoints",
-            "source": "clearskies.Endpoint",
+            "source": "clearskies.endpoint.Endpoint",
+            "nav_order": 2,
             "classes": [
                 "clearskies.endpoints.Callable",
                 "clearskies.endpoints.Create",
