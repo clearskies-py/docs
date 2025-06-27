@@ -75,11 +75,18 @@ class ClassBackend(ModuleBackend):
         return self.paginate(matching_classes, query)
 
     def unpack(self, Class: type, module: ModuleType) -> dict[str, Any]:
+        source_file = ""
+        try:
+            # this fails for built ins
+            source_file = inspect.getfile(Class)
+        except TypeError:
+            pass
+
         return {
             "id": id(Class),
             "import_path": Class.__module__ + "." + Class.__name__,
             "name": Class.__name__,
-            "source_file": Class.__file__ if hasattr(Class, "__file__") else "",
+            "source_file": source_file,
             "doc": Class.__doc__,
             "module": module,
             "type": Class,
